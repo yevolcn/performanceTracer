@@ -1,0 +1,1 @@
+chrome.browserAction.onClicked.addListener(function(e){chrome.tabs.executeScript(null,{file:"performance-min.js",runAt:"document_end"})});

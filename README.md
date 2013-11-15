@@ -4,6 +4,9 @@ performanceTracer
 
 查看performance API 耗时统计
 
+###注意事项
+__由于window.performance.timing还处于w3c完善过程中，当你的网站有异步请求时，请在所有异步请求完成后再点击chrome上的插件按钮，以确保数据正确__
+
 ##使用方法
 
 ####1、直接在html文件中引用
