@@ -51,9 +51,9 @@
             connectTime = timing.connectEnd - timing.connectStart;
             requestTime = timing.responseEnd - timing.requestStart;
             initDomTreeTime = timing.domInteractive - timing.responseEnd;
-            domReadyTime = timing.domComplete - timing.domInteractive;
+            domReadyTime = timing.domComplete - timing.domInteractive; //过早获取时 domComplete有时会是0
             loadEventTime = timing.loadEventEnd - timing.loadEventStart;
-            loadTime = timing.loadEventEnd - timing.navigationStart;
+            loadTime = timing.loadEventEnd - timing.navigationStart;//过早获取时 loadEventEnd有时会是0
 
             initDom();
 
