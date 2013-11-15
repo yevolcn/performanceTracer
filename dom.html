@@ -1,11 +1,9 @@
-    <div>
-        <style type="text/css">
+<style type="text/css">
         .anim{
             -moz-transform: translateX(900px);
             -ms-transform: translateX(900px);
             -webkit-transform: translateX(900px);
             transform: translateX(900px);
-
             -webkit-transition: -webkit-transform .5s;
             -moz-transition: -moz-transform .5s;
             -ms-transition: -ms-transform .5s;
@@ -24,8 +22,34 @@
             font-weight: bold;
             text-shadow: 2px 2px 2px black, -2px -2px 2px black;
         }
+        #performanceTracer-close{
+            position: absolute;
+            top: 0;
+            right: 0;
+            border: 3px solid white;
+            width: 20px;
+            height: 20px;
+            border-radius: 20px;
+            line-height: 20px;
+            text-align: center;
+            font-family: 'Open Sans',arial,sans-serif;
+            font-size: 16px;
+            background: white;
+            color: black;
+            text-shadow: none;
+            cursor: pointer;
+        }
         .performanceTracer h1{
             text-align: center;
+        }
+        .performanceTracer h2{
+            position: absolute;
+            top: 30px;
+            right: 20px;
+            margin: 0;
+            opacity: .3;
+            text-shadow: none;
+            font-style: italic;
         }
         .performanceTracer-wrap{
             position: absolute;
@@ -72,10 +96,10 @@
             background: #666;
             box-shadow: 2px 2px 2px black;
             border-radius: 0 2px 2px 0;
-            -webkit-transition: width .5s 2s;
-            -moz-transition: width .5s 2s;
-            -ms-transition: width .5s 2s;
-            transition: width .5s 2s;
+            -webkit-transition: width .5s .6s;
+            -moz-transition: width .5s .6s;
+            -ms-transition: width .5s .6s;
+            transition: width .5s .6s;
             float: left;
         }
         .performanceTracer-bar-value{
@@ -113,10 +137,9 @@
             background: #AB76E0;
         }
     </style>
-    <div class="performanceTracer">
+    <div class="performanceTracer" id="performanceTracer">
         <div class="performanceTracer-wrap">
             <div class="performanceTracer-content">
-                <h1>总耗时: <em id="performanceTracer-loadTime"></em></h1>
                 <ul>
                     <li id="performanceTracer-readyStart">
                         <span class="performanceTracer-lab">准备新页面时间耗时: </span><span class="performanceTracer-bar">
@@ -179,7 +202,9 @@
                         </span>
                     </li>
                 </ul>
+                <h1>总耗时: <em id="performanceTracer-loadTime"></em></h1>
+                <h2>performanceTracer (alpha)</h2>
+                <div id="performanceTracer-close">x</div>
             </div>
         </div>
-    </div>
     </div>

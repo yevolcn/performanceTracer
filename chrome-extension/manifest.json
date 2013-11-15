@@ -1,0 +1,20 @@
+{  
+  "name": "performanceTracer",
+  "manifest_version": 2,
+  "version": "1.0",  
+  "description": "performance timming 统计",  
+  "background": { "scripts": ["background.js"] },
+  "browser_action": {  
+    "default_icon": "icon128.png" ,
+    "default_title": "default title"
+  },
+  "homepage_url": "https://github.com/willian12345/performanceTracer", 
+  "icons": {
+        "128": "icon128.png", 
+        "16": "icon16.png", 
+        "48": "icon48.png"
+    }, 
+  "permissions": [
+    "activeTab"
+  ]
+}
